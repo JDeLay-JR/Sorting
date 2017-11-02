@@ -1,10 +1,12 @@
 function bubbleSort(arr) {
+  console.log(arr);
   var sorted = false;
   var count = 1;
   while (!sorted) {
     var swaps = 0;
     for (var i = 0; i < arr.length - count; i++) {
       if (compare(i, i + 1, arr)) {
+        console.log('swap');
         arr = swap(i, i + 1, arr);
         swaps++;
       }
