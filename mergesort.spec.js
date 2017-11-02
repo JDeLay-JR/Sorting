@@ -32,13 +32,13 @@ describe('Merge function', function(){
   it('is able to merge two sorted arrays into one sorted array', function(){
     expect(merge([1, 2], [3, 4])).toEqual([1, 2, 3, 4]);
   });
-  it('is able to merge one sorted array and one unsorted array into one sorted array', function(){
-    expect(merge([1, 2], [4, 3])).toEqual([1, 2, 3, 4]);
+  it('is able to merge two sorted arrays into one sorted array2', function(){
+    expect(merge([3, 4], [1, 2])).toEqual([1, 2, 3, 4]);
   });
-  it('is able to merge one unsorted array and one sorted array into one sorted array', function(){
-    expect(merge([2, 1], [3, 4])).toEqual([1, 2, 3, 4]);
+  it('is able to merge two sorted arrays into one sorted array3', function(){
+    expect(merge([1, 3], [2, 4])).toEqual([1, 2, 3, 4]);
   });
-  it('is able to merge two unsorted arrays into one sorted array', function(){
-    expect(merge([2, 1], [4, 3])).toEqual([1, 2, 3, 4]);
+  it('is able to merge two sorted arrays into one sorted array4', function(){
+    expect(merge([2, 4], [1, 3])).toEqual([1, 2, 3, 4]);
   });
 });
