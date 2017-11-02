@@ -8,16 +8,20 @@ describe('Bubble Sort', function(){
   it('handles a totally unsorted array', function() {
     expect(bubbleSort([3,2,1])).toEqual([1,2,3]);
     expect(window.swap.calls.count()).toEqual(3);
+    //expect(window.swap.compare.count()).toEqual(14);
   })
   it('handles a semi-sorted array', function() {
     expect(bubbleSort([5,3,4,1])).toEqual([1,3,4,5]);
     expect(window.swap.calls.count()).toEqual(5);
+    //expect(window.compare.calls.count()).toEqual(14);
   })
   it('handles repeated numbers', function() {
     expect(bubbleSort([5,5,4,3,2,1])).toEqual([1,2,3,4,5,5]);
     expect(window.swap.calls.count()).toEqual(14);
+    //expect(window.compare.calls.count()).toEqual(14);
   })
-  beforeAll(function () {
-    spyOn(window, 'swap').and.callThrough(); // replace existing `tootsiepop['lick']` method
+  beforeEach(function () {
+    spyOn(window, 'swap').and.callThrough();
+    //spyOn(window, 'compare').and.callThrough(); // replace existing `tootsiepop['lick']` method
   });
 });
